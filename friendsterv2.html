@@ -1,0 +1,454 @@
+<!DOCTYPE>
+<html>
+<head>
+	<style>
+	
+		ul{
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			overflow:hidden;
+			background-color:#e698a3;
+		}
+		
+		li{
+			float:right;
+		}
+		
+		li a{
+			display:block;
+			color:white;
+			text-align:center;
+			padding:16px;
+			text-decoration:none;
+		}
+		
+		li a:hover{
+			background-color:#FFCCB6;
+		}
+
+		.floating-decor {
+			text-align: center;
+			font-size: 1.9em;
+			animation: float 10s infinite alternate ease-in-out;
+		}
+
+		@keyframes float {
+			0% { transform: translateY(0); opacity: 0.8; }
+			100% { transform: translateY(-10px); opacity: 1; }
+		}
+
+
+        body {
+            background-image: url('Beach.jpg');
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+		
+		body {
+            font-family: "Pacifico", Merriweather, Comfortaa;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #ff1a5f;
+			font-size: 1.1rem;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            background: rgba(230, 230, 230, 0.5);
+            padding: 30px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+
+        .profile {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ff437c;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+		
+        .pics {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .pics-card {
+            width: 200px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .pics-card:hover {
+            transform: scale(1.05);
+        }
+
+        .pics-card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+		
+		.ig-feed {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			gap: 2px;
+			padding: 0;
+			margin: 0 auto;
+			max-width: 1100px;
+		}
+
+		.ig-feed img {
+			width: 100%;
+			aspect-ratio: 1/1;
+			object-fit: cover;
+			display: block;
+		}
+
+		.ig-feed img:hover {
+			transform: scale(1.03);
+		}
+		
+		.heart {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 50px;
+			color: white;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			pointer-events: none;
+			text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+		}
+		
+		.ig-post {
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.ig-post:hover .heart {
+			opacity: 1;
+		}
+	
+		.project-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 40px;
+			flex-wrap: wrap;
+			padding: 20px;
+		}
+
+		.project-image img {
+			max-width: 400px;
+			border-radius: 12px;
+			box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+		}
+
+		.project-text {
+			max-width: 600px;
+			font-style: italic;
+			color: #062543;
+			font-size: 1.1rem;
+			text-align: justify;
+		}
+
+		.project-gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			margin-top: 40px;
+			padding: 0 20px;
+		}
+
+		.project-gallery img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+			object-fit: cover;
+		}
+
+        .followers {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            padding: 10px;
+        }
+
+        .follower {
+            width: 70px;
+            text-align: center;
+        }
+
+        .follower img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #00f48e;
+            transition: transform 0.3s;
+        }
+
+        .follower img:hover {
+            transform: scale(1.1);
+        }
+
+		
+    </style>
+</head>
+<body>
+
+	<ul>
+		<b><li><a href="#Followers"> Dreamer Drifters </a></li></b>
+		<b><li><a href="#Certificates"> Seaside Seals </a></li></b>
+		<b><li><a href="#Projects"> Drift of Creations </a></li></b>
+		<b><li><a href="#Accomplishments"> Waves of Growth </a></li></b>
+		<b><li><a href="#AboutMe"> Meet the Dreamer </a></li></b>
+	</ul>
+	<br><br>
+
+	<h1 style="text-align:center;color:purple">WELCOME TO MY FRIENDSTER!</h1>
+
+	
+	<h3 style="text-align:center; color:#fafafa; font-style:italic;">
+	Drift into a gentle tide of memories, musings, and moments. </h3>
+	<h3 style="text-align:center; color:#fafafa; font-style:italic;">Where the breeze is always soft, the skies blush in pastel hues, and friendship flows like waves.
+	</h3>
+	
+	<div class="floating-decor">
+		🌸 🐚 🌸 🐚 🌸
+	</div>
+
+	
+	<section id="AboutMe" style="padding: 100px;">
+		
+		<div class="container">
+        <div class="profile">
+            <img src="kath.jpeg" alt="Blogger Profile">
+            <b><h2>@ms.kathh</h2></b>
+            <b><i><h2 style="color:green">🌺Meet the Dreamer🌺</h2></b></i>
+			
+			<b><i><p style="color:green">"With the calm confidence of a sea breeze and the soft spark of a coastal sunset, Kathleen B. Dacian is not your ordinary BSAIS student. She rides the waves of innovation, blending accounting precision with digital creativity. Inspired by ocean skies and grounded by her goals, Kath turns ideas into impact, whether through system solutions, academic projects, or creative side hustles. She’s driven, detail-oriented, and always dreaming, proof that you can chase balance and brilliance at the same time."</p></i></b>
+				<div class="floating-decor">
+					🌸 🐚 🌸 🐚 🌸
+				</div>
+		</div>
+		
+	
+			<b><i><h2 style="color:purple"> 🌼 Coastal Whispers 🌼 </h2></i></b>
+			<b><i><p style="color:#ff437c">"A space for lifestyle thoughts, reflections, and soft moments."</p></i></b>
+			
+			<div class="ig-feed">
+			<div class="ig-post">
+				<img src="love.jpg" alt="IG Photo 1">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="cake.jpg" alt="IG Photo 2">
+				<span class="heart">❤</span>
+			</div>
+				
+			<div class="ig-post">
+				<img src="flower.jpg" alt="IG Photo 3">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="daru.jpg" alt="IG Photo 4">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="study.jpg" alt="IG Photo 5">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="sunset.jpg" alt="IG Photo 6">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="quesa.jpg" alt="IG Photo 7">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="mang.jpg" alt="IG Photo 8">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="mirror.jpg" alt="IG Photo 9">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="lachimolala.jpg" alt="IG Photo 10">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="bday.jpg" alt="IG Photo 11">
+				<span class="heart">❤</span>
+			</div>
+			
+			<div class="ig-post">
+				<img src="jk.jpg" alt="IG Photo 12">
+				<span class="heart">❤</span>
+			</div>
+			</div>
+		
+		<br>
+		<a href="https://www.instagram.com/lveariesxv" target="_blank">
+		<img src="2.jpg" alt="Instagram" width="50px" height="50px" style="float:center;border-radius: 10px;">
+		</a>
+
+		<a href="https://www.facebook.com/kathleen.dacian.1" target="_blank">
+		<img src="1.jpg" alt="Facebook" width="50px" height="50px" style="float:center;border-radius: 10px;">
+		</a>
+		</section>
+		
+	<section id="Accomplishments" style="padding: 100px; background-color:#ffe4e1;">
+		
+		<b><i><h1 style="color:purple">🌊 Waves of Growths 🌊 </h1></b></i>
+		<b><i><p style="color:#ff1a5f">Every ripple tells a story of progress. Dive into the milestones and moments that shaped my journey, one wave at a time.</p></i></b>
+        <div class="pics">
+            <div class="pics-card">
+                <img src="puff.jpg" alt="Pic 1">
+			</div>
+			
+            <div class="pics-card">
+                <img src="v.jpg" alt="Pic 2">
+            </div>
+			
+            <div class="pics-card">
+                <img src="svt.jpg" alt="Pic 3">
+            </div>
+			
+			<div class="pics-card">
+                <img src="kkk.jpg" alt="Pic 4">
+            </div>
+			
+			<div class="pics-card">
+                <img src="sea.jpg" alt="Pic 5">
+            </div>
+        </div>
+		
+	</section>
+
+	<section id="Projects" style="padding: 100px; background-color: #fffacd;">
+		<b><i><h1 style="color:green">🦋Drift of Creations🦋</h1></b></i>
+		<b><i><p style="color:#ff1a5f"> Let your curiosity float on a breeze of ideas. These are the projects that turned imagination into action and dreams into digital works.</p></i></b>
+		<br>
+		<div class="project-content">
+			<div class="project-image">
+				<img src="R.png" alt="Project Image">
+			</div>
+			<div class="project-text">
+			<b><i><p style="color:purple">  In the gentle tide of change, innovation flows like the sea. Guided by the calm clarity of purpose, we envisioned a brighter, more efficient future for Pasacao Water District (PAWADI) — one where stock inventory isn’t just managed, but meaningfully transformed. Like waves smoothing the shore, our proposed Digital Accounting Information System brings a seamless, real-time solution to the district’s manual inventory tracking. Thoughtfully crafted through research and collaboration, this system empowers PAWADI to make smarter procurement choices, reduce losses, and ride the current of digital transformation. In a world where progress drifts in like a pink ocean breeze, we offer a tool that nurtures sustainability, precision, and growth — one ripple at a time.
+			</b></i></p>
+			</div>
+		</div>
+		
+		<div class="project-gallery">
+			<img src="E.png" alt="Screenshot 1">
+			<img src="S.png" alt="Screenshot 2">
+			</div>
+
+	
+	</section>
+
+	<section id="Certificates" style="padding: 100px; background-color: #e0ffff;">
+		<b><i><h1 style="color:green">🏝️Seaside Seals🏝️</h1></b></i>
+		<b><i><p style="color:#ff1a5f"> Like seashells collected on a journey, these certificates mark where I’ve been and how far I’ve come. Each one holds a story of learning and achievement.</p></i></b>
+		
+		<div class="pics">
+            <div class="pics-card">
+                <img src="c1.png" alt="Pic 1">
+			</div>
+			
+            <div class="pics-card">
+                <img src="c2.png" alt="Pic 2">
+            </div>
+			
+            <div class="pics-card">
+                <img src="c3.png" alt="Pic 3">
+            </div>
+			
+			<div class="pics-card">
+                <img src="c4.png" alt="Pic 4">
+            </div>
+			
+			<div class="pics-card">
+                <img src="c5.png" alt="Pic 5">
+            </div>
+			
+			<div class="pics-card">
+                <img src="c6.png" alt="Pic 6">
+            </div>
+			
+			<div class="pics-card">
+                <img src="c7.png" alt="Pic 7">
+            </div>
+			
+			<div class="pics-card">
+                <img src="c8.jpeg" alt="Pic 8">
+            </div>
+        </div>
+
+		</section>
+		
+	<br><br>
+	
+	<section id="Followers" style="padding: 75px; background: rgba(270, 270, 270, 0.6);">
+	
+	<b><i><h1 style="color:purple">🌺Dreamer Drifters:WaveMates✨</h1></b></i>
+	<b><i><p style="color:#ff1a5f">Welcome to my circle of kindred spirits riding the tides of dreams and stories.</b></i></p>
+	<b><i><p style="color:#ff1a5f">Whether you're here to drift, dive, or simply daydream — you're right where you belong.</b></i></p>
+	<br><br>
+	
+    <div class="followers">
+        <div class="follower">
+			<a href="C:\Users\Kath\Documents\ISOM_ME\html\guide.html" target="_blank">
+            <img src="aicha.jpg" alt="Follower 1"></a>
+            <b><p>Aicha</p></b>
+        </div>
+        <div class="follower">
+			<a href="https://" target="_blank">
+            <img src="betty.jpg" alt="Follower 2"></a>
+            <b><p>Laura</p></b>
+        </div>
+        <div class="follower">
+			<a href="https://" target="_blank">
+            <img src="zie.jpg" alt="Follower 3"></a>
+            <b><p>Whinzie</p></b>
+        </div>
+		<div class="follower">
+			<a href="https://" target="_blank">
+            <img src="yna.jpg" alt="Follower 4"></a>
+            <b><p>Selina</p></b>
+        </div>
+    </div>
+	</section>
+</body>
+</html>
